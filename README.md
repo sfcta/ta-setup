@@ -1,7 +1,8 @@
 ta-setup
 ========
 
-=== Basic installations ===
+Basic installations 
+===================
 
 1. Install 64-bit python 2.7.7 from https://www.python.org/ftp/python/2.7.7/python-2.7.7.amd64.msi DO NOT INSTALL PYTHON 3!!!
 2. Add C:\Python27;C:\Python27\Scripts to the PATH Environment Variable
@@ -18,12 +19,15 @@ ta-setup
  * This will involve a lot of clicking and hitting return between pauses.
 7. Check that the python packages have been installed by running the command `pip list` from the DOS command line
 
-=== Setting up Git ===
+Setting up Git
+---------------------
  * When asked about UNIX vs DOS line endings, select "check out as-is, commit as-is"
  * Generally our policy is to use DOS line endings in our code
  * Allow git commands from DOS window
 
-=== SF-CHAMP "run" setup ===
+SF-CHAMP "run" setup
+======================
+
 1. Install *Dispatch*
  * Clone `https://github.com/sfcta/dispatch` by going to webpage and clicking "Clone in Desktop"
  * Add dispatch.bat to your PATH environment variable
@@ -31,8 +35,11 @@ ta-setup
  * Clone `https://github.com/sfcta/dispatch` by going to webpage and clicking "Clone in Desktop"
  * Add dispatch.bat to your PATH environment variable
 
-=== DTA setup ===
+DTA setup
+=======================
+
 *on TA machines only*
+
 1. Install 64 adn 32 bit versions Dynameq from `S:/Software/Modeling/Dynameq`
  * `Dynameq-test-2.7.0.2-x64.exe`
  * `Dynameq-test-2.7.0.2-x86.exe`
@@ -49,9 +56,9 @@ ta-setup
  * Open a command window and type `python`
  * After python loads, type `import dta`.  If nothing happens, great! If it failed to load, something is wrong with your PYTHONPATH
 
-=== SF-CHAMP "Development Setup ===
-1. Eclipse
-2. Boost
-3. MSYS
+SF-CHAMP "Development Setup
+=======================
+
+ * see github.com/sfcta/champ
 
 

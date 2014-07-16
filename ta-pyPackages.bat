@@ -1,6 +1,13 @@
-SET PIP_LIST=networkx,pyro,pyshp,xlrd,xlwt,pyparsing,transitfeed,sphinx,nose
+SET PIP_LIST=networkx,pyro,pyshp,xlrd,xlwt,pyparsing,transitfeed,sphinx,nose,geopandas
 SET PATH=%PATH%;C:\Python27;C:\Python27\Scripts
-SET S3_BUCKET=http://champ-results.s3.amazonaws.com/tools/installers
+
+
+:pip
+SET BUCKET=https://bootstrap.pypa.io
+SET INSTALLER=get-pip.py
+python download.py
+python get-pip.py
+
 
 :pippables
 for %%a in (%PIP_LIST%) DO (
@@ -8,35 +15,35 @@ for %%a in (%PIP_LIST%) DO (
  pip install %%a
 )
 
-:executables
+SET BUCKET=http://champ-results.s3.amazonaws.com/tools/installers
 
 :numpy
 SET INSTALLER=numpy-MKL-1.8.1.win-amd64-py2.7.exe
-python gets3.py
+python download.py
 %INSTALLER%
 pause
 
 :numexpr
 SET INSTALLER=numexpr-2.4.win-amd64-py2.7.exe
-python gets3.py
+python download.py
 %INSTALLER%
 pause
 
 :scipy
 SET INSTALLER=scipy-0.14.0.win-amd64-py2.7.exe
-python gets3.py
+python download.py
 %INSTALLER%
 pause
 
 :pandas
 SET INSTALLER=pandas-0.14.0.win-amd64-py2.7.exe
-python gets3.py
+python download.py
 %INSTALLER%
 pause
 
 :simpleparse
 SET INSTALLER=SimpleParse-2.1.1.win-amd64-py2.7.exe
-python gets3.py
+python download.py
 %INSTALLER%
 pause
 
